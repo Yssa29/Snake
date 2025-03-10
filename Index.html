@@ -9,6 +9,17 @@
 <body>
     <div class="container">
         <h1 class="title">Snake Game</h1>
+
+        <!-- Fenêtre de sélection de difficulté -->
+        <div id="difficulty-modal" class="modal">
+            <div class="modal-content">
+                <h2>Choisir la difficulté</h2>
+                <button onclick="setDifficulty('facile')">Facile</button>
+                <button onclick="setDifficulty('moyen')">Moyen</button>
+                <button onclick="setDifficulty('difficile')">Difficile</button>
+            </div>
+        </div>
+
         <div class="game-container">
             <canvas id="gameCanvas" width="400" height="400"></canvas>
             <div class="overlay" id="gameOverOverlay">
@@ -16,6 +27,7 @@
                     <h2>Game Over!</h2>
                     <p>Your score: <span id="finalScore"></span></p>
                     <button id="restartButton">Restart</button>
+                    <button id="mainMenuButton" style="display:none;">Menu Principal</button> <!-- Bouton Menu Principal -->
                 </div>
             </div>
         </div>

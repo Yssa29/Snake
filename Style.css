@@ -2,7 +2,9 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f7f7f7;
+    background-image: url('image/depositphotos_11538990-stock-photo-blue-python-snake-skin-texture.jpg'); /* Ajout de l'image de fond */
+    background-size: cover;
+    background-position: center;
 }
 
 .container {
@@ -14,7 +16,7 @@ body {
 
 .title {
     font-size: 36px;
-    color: #333;
+    color: #fb5800;
 }
 
 .game-container {
@@ -23,9 +25,11 @@ body {
 }
 
 #gameCanvas {
-    background-color: #333;
-    border: 2px solid #eee;
+    background-color: #1b459f;
+    border: 2px solid #fb5800;
     border-radius: 5px;
+    display: none; /* Cache le canvas jusqu'à ce que la difficulté soit sélectionnée */
+    margin-left: 200px;
 }
 
 .overlay {
@@ -34,7 +38,6 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
     display: none;
 }
 
@@ -64,4 +67,39 @@ body {
 
 #restartButton:hover {
     background-color: #45a049;
+}
+
+/* Style de la fenêtre modale de sélection de difficulté */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0D8BF1;
 }
